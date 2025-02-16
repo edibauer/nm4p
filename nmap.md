@@ -78,7 +78,32 @@ https://nmap.org/nsedoc/categories/default.html
 nmap -p 21,139,445 10.10.10.4 -T5 -sT -Pn --open -sV -sC
 ```
 
+### All network
+```bash
+nmap -O 192.168.1.0/24 # -O to view OS
+```
+### Specific network
+```bash
+nmap -p- -sVC -sC --open -sS -vvv -n -Pn 192.168.1.3
+```
 
+Donde:
+
+`-p-`: Todos los puertos
+
+`-sVC`: Escanea los servicios y versiones de los puertos
+
+`-sC`: Escanea los scripts NSE
+
+`--open`: Escanea los puertos abiertos
+
+`-sS`: Escanea los servicios
+
+`-vvv`: Muestra los detalles del escaneo
+
+`-n`: Sin resolución DNS
+
+`-Pn`: No pide ping
 
 
 
